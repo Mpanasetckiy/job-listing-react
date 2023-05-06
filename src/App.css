@@ -8,8 +8,23 @@ body {
   background: var(--bg-color);
 }
 
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+b {
+  color: var(--header-color);
+  display: block;
+  margin-top: 1rem;
+}
+
+h3:hover {
+  color: var(--header-color);
+  cursor: pointer;
+}
+
 header {
-  background: url(./images/bg-header-desktop.svg) var(--header-color);
+  background: url(/public/images/bg-header-desktop.svg) var(--header-color);
   height: 156px;
 }
 
@@ -29,21 +44,39 @@ section {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
+.filter-bar {
+  margin-top: -4rem;
+  height: 80px;
+  background: var(--card-color);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
 .card__wrap {
   display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+
+.card__wrap:hover {
+  border-left: 4px solid var(--header-color);
 }
 
 .wrap__left ul {
   display: flex;
   list-style: none;
-  gap: 1rem;
+  gap: 0.5rem;
   padding: 0;
 }
 
 .card__right {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   padding-left: 0;
   padding-right: 2rem;
