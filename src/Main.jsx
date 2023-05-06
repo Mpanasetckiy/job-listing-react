@@ -23,19 +23,22 @@ const Main = () => {
       setQueries(newFilterArr);
     }
   };
-
   return (
     <section>
-      <div className="filter-bar">
-        {queries &&
-          queries.map((q) => {
+      {Boolean(queries.length) && (
+        <div className="filter-bar">
+          {queries.map((q) => {
             return (
-              <button id={q} onClick={removeQuery}>
-                {q}
-              </button>
+              <div>
+                <button>{q}</button>
+                <button className="black" id={q} onClick={removeQuery}>
+                  <i className="fas fa-times"></i>
+                </button>
+              </div>
             );
           })}
-      </div>
+        </div>
+      )}
       {data
         .filter(({ role, level, languages, tools }) => {
           const allValues = [role, level, ...languages, ...tools];

@@ -42,6 +42,7 @@ section {
   justify-content: space-between;
   background: var(--card-color);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .filter-bar {
@@ -53,6 +54,7 @@ section {
   align-items: center;
   gap: 1rem;
   padding: 0 2rem;
+  border-radius: 5px;
 }
 
 .card__wrap {
@@ -96,6 +98,15 @@ button {
 button:hover {
   background-color: var(--header-color);
   color: #fff;
+}
+
+.black {
+  background-color: var(--header-color);
+  color: #fff;
+}
+
+.black:hover {
+  background-color: black;
 }
 
 /* Site footer */
