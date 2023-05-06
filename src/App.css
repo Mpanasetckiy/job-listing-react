@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+:root {
+  --bg-color: hsl(180, 52%, 96%);
+  --card-color: #fff;
+  --header-color: hsl(180, 29%, 50%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: var(--bg-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  background: url(./images/bg-header-desktop.svg) var(--header-color);
+  height: 156px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  background: var(--card-color);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card__wrap {
+  display: flex;
+}
+
+.wrap__left ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+}
+
+.card__right {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-left: 0;
+  padding-right: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  height: 40px;
+  border: none;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  background-color: var(--bg-color);
+  color: var(--header-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  border-radius: 5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: var(--header-color);
+  color: #fff;
+}
+
+/* Site footer */
+
+footer a {
+  text-decoration: none;
+}
+.footer__wrap {
+  display: flex;
+  border-top: 1px solid gray;
+  padding: 1rem 0 1rem;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.img__wrap {
+  height: 2rem;
+}
+
+.footer__img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+footer img {
+  height: 100%;
+  border-radius: 2px;
+  transition: all 0.5s ease;
+}
+
+.footer__logo {
+  text-align: center;
 }
