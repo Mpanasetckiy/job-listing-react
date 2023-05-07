@@ -27,12 +27,12 @@ const Main = () => {
     <section>
       {Boolean(queries.length) && (
         <div className="filter-bar">
-          {queries.map((q) => {
+          {queries.map((q, index) => {
             return (
-              <div>
+              <div key={index}>
                 <button>{q}</button>
                 <button className="black" id={q} onClick={removeQuery}>
-                  <i className="fas fa-times"></i>
+                  <i className="fas fa-times" id={q} onClick={removeQuery}></i>
                 </button>
               </div>
             );
@@ -50,6 +50,7 @@ const Main = () => {
             company,
             logo,
             featured,
+            isNew,
             position,
             role,
             level,
@@ -60,13 +61,17 @@ const Main = () => {
             tools,
           }) => {
             return (
-              <div className="card">
+              <div key={id} className="card">
                 <div className="card__wrap">
                   <div>
                     <img src={logo} alt={position} />
                   </div>
                   <div className="wrap__left">
-                    <b>{company}</b>
+                    <div className="wrap__p">
+                      <b>{company}</b>
+                      {isNew ? <p className="p-new">NEW!</p> : null}
+                      {featured ? <p className="p-feat">FEATURED</p> : null}
+                    </div>
                     <h3>{position}</h3>
                     <ul>
                       <li>{postedAt}</li>&middot;<li>{contract}</li>&middot;
@@ -82,14 +87,14 @@ const Main = () => {
                     {level}
                   </button>
                   {languages &&
-                    languages.map((l) => (
-                      <button id={l} onClick={handleClick}>
+                    languages.map((l, index) => (
+                      <button key={index} id={l} onClick={handleClick}>
                         {l}
                       </button>
                     ))}
                   {tools &&
-                    tools.map((t) => (
-                      <button id={t} onClick={handleClick}>
+                    tools.map((t, index) => (
+                      <button key={index} id={t} onClick={handleClick}>
                         {t}
                       </button>
                     ))}

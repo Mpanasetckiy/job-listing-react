@@ -10,6 +10,7 @@ body {
 
 h3 {
   font-family: "Poppins", sans-serif;
+  margin-top: 0.5rem;
 }
 
 b {
@@ -66,6 +67,7 @@ section {
 
 .card__wrap:hover {
   border-left: 4px solid var(--header-color);
+  transition: all 0.2s ease-in;
 }
 
 .wrap__left ul {
@@ -73,6 +75,27 @@ section {
   list-style: none;
   gap: 0.5rem;
   padding: 0;
+}
+
+.wrap__p {
+  display: flex;
+  gap: 1rem;
+}
+
+.p-new,
+.p-feat {
+  background-color: var(--header-color);
+  padding: 7px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.p-feat {
+  background-color: black;
 }
 
 .card__right {
