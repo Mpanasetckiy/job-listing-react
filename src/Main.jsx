@@ -64,7 +64,7 @@ const Main = () => {
               <div key={id} className="card">
                 <div className="card__wrap">
                   <div>
-                    <img src={logo} alt={position} />
+                    <img src={logo} alt={position} width="88px" height="88px" />
                   </div>
                   <div className="wrap__left">
                     <div className="wrap__p">
